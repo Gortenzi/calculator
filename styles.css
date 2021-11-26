@@ -1,0 +1,107 @@
+/* bg E5E5E5
+blue 4B5EFC
+dark grey 2E2F38
+ grey 4E505F
+black 2E2F38 */
+
+body {
+  font-family: Work Sans;
+  background-color: #e5e5e5;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+.calc {
+  margin: 70px auto;
+  width: 364px;
+  height: 582px;
+  background: #050505;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+.calc-screen {
+  /* background-color: aqua; */
+  height: 96px;
+  margin-bottom: 16px;
+  padding: 12px;
+  justify-items: end;
+  font-weight: 300;
+}
+.calc-screen p {
+  font-weight: light;
+  text-align: right;
+  font-size: 96px;
+  margin: 0;
+}
+.buttons {
+  display: grid;
+  grid-template-areas:
+    "letter-c letter-c reset delete"
+    "seven eight nine x"
+    "four five six minus"
+    "one two tree plus"
+    "zero zero zero equal";
+  grid-gap: 16px;
+  justify-items: center;
+  margin: 0 20px;
+  position: absolute;
+}
+
+.btn {
+  width: 69px;
+  height: 72px;
+  background: #2e2f38;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 72px;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+/* .btn.reset::before {
+  content: "";
+  background-image: url(img/res.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+} */
+/* .btn.delete::before {
+  content: "";
+  background-image: url(img/del.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  position: relative;
+} */
+.btn.letter-c {
+  grid-area: letter-c;
+  width: 100%;
+  font-size: 40px;
+}
+.btn.zero {
+  grid-area: zero;
+  width: 100%;
+}
+.btn:hover {
+  filter: brightness(120%);
+}
+.btn:active {
+  filter: brightness(85%);
+}
+.btn.bg-light {
+  background-color: #4e505f;
+}
+.btn.reset {
+  justify-content: center;
+  align-items: center;
+  line-height: 72px;
+}
+
+.btn.bg-blue {
+  background-color: #4b5efc;
+}
